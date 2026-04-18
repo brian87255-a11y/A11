@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
 	<title>San Joaquin Valley Town Hall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
 	<link rel="stylesheet" href="../styles/main.css">
 </head>
+
 <body>
 	<header>
-		<img src="../images/town_hall_logo.gif" alt="San Joaquin Valley Town Hall Logo">
+		<img src="../images/town_hall_logo.gif" alt="Town Hall logo">
 		<h2>San Joaquin Valley Town Hall</h2>
-		<h3>Celebrating our 75<sup><em class="large">th</em></sup> Year</h3>
+		<h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
 	</header>
 	<nav class="navbar">
-		<input type="checkbox" id="menu-toggle">
-		<label for="menu-toggle" class="menu-btn">&#9776;</label>
-		<ul class="menu">
+		<ul class="menu" id="main-menu">
 			<li><a href="../index.html">Home</a></li>
-			<li class="has-submenu">
-				<a href="#" class="current">Speakers <small></small></a>
-				<ul class="submenu">
+			<li class="submenu">
+				<a href="#" class="current">Speakers<small>&#9660;</small></a>
+				<ul class="dropdown">
 					<li><a href="brancaccio.html">David Brancaccio</a></li>
 					<li><a href="sorkin.html">Andrew Ross Sorkin</a></li>
 					<li><a href="chua.html">Amy Chua</a></li>
@@ -29,11 +30,12 @@
 			</li>
 			<li><a href="#">Luncheons</a></li>
 			<li><a href="#">Tickets</a></li>
-			<li class="has-submenu">
-				<a href="#">About Us <small></small></a>
-				<ul class="submenu">
-					<li><a href="#">Our Mission</a></li>
+			<li class="submenu">
+				<a href="#">About Us<small>&#9660;</small></a>
+				<ul class="dropdown">
+					<li><a href="#">Our History</a></li>
 					<li><a href="#">Board of Directors</a></li>
+					<li><a href="#">Past Speakers</a></li>
 					<li><a href="#">Contact Us</a></li>
 				</ul>
 			</li>
@@ -43,25 +45,20 @@
 		<aside>
 			<h2>Guest speakers</h2>
 			<h3>October<br><a href="brancaccio.html">David Brancaccio</a></h3>
-			<img src="../images/brancaccio75.jpg" alt="David Brancaccio">
+			<img src="../images/brancaccio75.jpg" alt="David Brancaccio photo">
 			<h3>November<br><a href="sorkin.html">Andrew Ross Sorkin</a></h3>
-			<img src="../images/sorkin75.jpg" alt="Andrew Ross Sorkin">
+			<img src="../images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
 			<h3>January<br><a href="chua.html">Amy Chua</a></h3>
-			<img src="../images/chua75.jpg" alt="Amy Chua">
+			<img src="../images/chua75.jpg" alt="Amy Chua photo">
 			<h3>February<br><a href="sampson.html">Scott Sampson</a></h3>
-			<img src="../images/sampson75.jpg" alt="Scott Sampson">
+			<img src="../images/sampson75.jpg" alt="Scott Sampson photo">
 		</aside>
 		<section class="speaker">
 			<h1>Andrew Ross Sorkin</h1>
 			<article>
 				<img src="../images/sorkin75.jpg" alt="Andrew Ross Sorkin">
 				<h2>November<br>Andrew Ross Sorkin</h2>
-				<p>Andrew Ross Sorkin is a financial columnist for The New York Times and the co-anchor of 
-				   CNBC's Squawk Box. He is the founder of DealBook, the Times's influential daily financial 
-				   briefing, and the author of Too Big to Fail, a definitive account of the 2008 financial crisis.</p>
-				<p>Sorkin's work has made him one of the most prominent financial journalists in the United States. 
-				   His reporting and analysis on Wall Street, corporate America, and economic policy have shaped 
-				   public understanding of modern finance.</p>
+				<p>This page is coming soon. Please check back for more information about Andrew Ross Sorkin's upcoming talk.</p>
 			</article>
 			<p><a href="../index.html">Return to Home Page</a></p>
 		</section>
@@ -70,5 +67,17 @@
 		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 		<p>&copy; Copyright Brian Rivera, April 2026</p>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#main-menu').slicknav({
+				prependTo: '.navbar',
+				closedSymbol: '&#9658;',
+				openedSymbol: '&#9660;'
+			});
+		});
+	</script>
 </body>
 </html>
