@@ -6,6 +6,7 @@
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
 </head>
 <body>
 	<header>
@@ -14,13 +15,11 @@
 		<h3>Celebrating our 75<sup><em class="large">th</em></sup> Year</h3>
 	</header>
 	<nav class="navbar">
-		<input type="checkbox" id="menu-toggle">
-		<label for="menu-toggle" class="menu-btn">&#9776;</label>
-		<ul class="menu">
+		<ul class="menu" id="main-menu">
 			<li><a class="current">Home</a></li>
-			<li class="has-submenu">
-				<a href="#">Speakers <small></small></a>
-				<ul class="submenu">
+			<li>
+				<a href="#">Speakers &#9660;</a>
+				<ul>
 					<li><a href="speakers/brancaccio.html">David Brancaccio</a></li>
 					<li><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></li>
 					<li><a href="speakers/chua.html">Amy Chua</a></li>
@@ -29,9 +28,9 @@
 			</li>
 			<li><a href="#">Luncheons</a></li>
 			<li><a href="#">Tickets</a></li>
-			<li class="has-submenu">
-				<a href="#">About Us <small></small></a>
-				<ul class="submenu">
+			<li>
+				<a href="#">About Us &#9660;</a>
+				<ul>
 					<li><a href="#">Our Mission</a></li>
 					<li><a href="#">Board of Directors</a></li>
 					<li><a href="#">Contact Us</a></li>
@@ -84,5 +83,17 @@
 		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 		<p>&copy; Copyright Brian Rivera, April 2026</p>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#main-menu').slicknav({
+				prependTo: '.navbar',
+				closedSymbol: '&#9658;',
+				openedSymbol: '&#9660;'
+			});
+		});
+	</script>
 </body>
 </html>
